@@ -1,36 +1,51 @@
-import http.server
-import socketserver
+# Импорт встроенной библиотеки для работы веб-сервера
+from http.server import BaseHTTPRequestHandler, HTTPServer
+import time
 
-# Указываем порт, на котором будет работать сервер
-PORT = 8000
-
-# Путь к HTML-файлу с контактами
+# Для начала определим настройки запуска
+hostName = "localhost" # Адрес для доступа по сети
+serverPort = 8080 # Порт для доступа по сети
 HTML_FILE = 'contacts.html'
 
-class MyHandler(http.server.SimpleHTTPRequestHandler):
+class MyServer(BaseHTTPRequestHandler):
+    """
+        Специальный класс, который отвечает за
+        обработку входящих запросов от клиентов
+    """
+
     def do_GET(self):
-        # Указываем путь к HTML-файлу, который будем отправлять
-        try:
-            # Открываем HTML-файл и читаем его содержимое
-            with open(HTML_FILE, 'r', encoding='utf-8') as file:
-                content = file.read()
+            """ Метод для обработки входящих GET-запросов """
+            try:
 
-            # Устанавливаем заголовок Content-Type для HTML
-            self.send_response(200)
-            self.send_header('Content-Type', 'text/html; charset=utf-8')
-            self.end_headers()
+                with open(HTML_FILE, 'r', encoding='utf-8') as file:
+                    content = file.read()
 
-            # Отправляем содержимое HTML-файла в ответ
-            self.wfile.write(content.encode('utf-8'))
 
-        except Exception as e:
-            # Если файл не найден или произошла ошибка, отправляем 404
-            self.send_error(404, f'File not found: {HTML_FILE}\n{e}')
+                self.send_response(200) # Отправка кода ответа
+                self.send_header('Content-Type', 'text/html; charset=utf-8') # Отправка типа данных, который будет передаваться
+                self.end_headers() # Завершение формирования заголовков ответа
+                self.wfile.write(bytes("{'message': 'OK'}", "utf-8"))  # Тело ответа
 
+
+                self.wfile.write(content.encode('utf-8'))
+
+            except Exception as e:
+                # Если файл не найден или произошла ошибка, отправляем 404
+                self.send_error(404, f'File not found: {HTML_FILE}\n{e}')
 
 if __name__ == "__main__":
+    # Инициализация веб-сервера, который будет по заданным параметрах в сети
+    # принимать запросы и отправлять их на обработку специальному классу, который был описан выше
+    webServer = HTTPServer((hostName, serverPort), MyServer)
+    print("Server started http://%s:%s" % (hostName, serverPort))
 
-    # Запуск сервера
-    with socketserver.TCPServer(("", PORT), MyHandler) as httpd:
-        print(f"Serving at port {PORT}")
-        httpd.serve_forever()
+    try:
+        # Cтарт веб-сервера в бесконечном цикле прослушивания входящих запросов
+        webServer.serve_forever()
+    except KeyboardInterrupt:
+        # Корректный способ остановить сервер в консоли через сочетание клавиш Ctrl + C
+        pass
+
+    # Корректная остановка веб-сервера, чтобы он освободил адрес и порт в сети, которые занимал
+    webServer.server_close()
+    print("Server stopped.")
