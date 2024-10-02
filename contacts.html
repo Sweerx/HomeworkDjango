@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Категория 1</title>
+    <title>Контакты</title>
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <style>
         html, body {
@@ -28,10 +28,6 @@
             text-align: center;
         }
 
-        .card {
-            border: 1px solid #dee2e6; /* Добавляем рамку карточкам */
-            border-radius: 0.25rem;
-        }
     </style>
 </head>
 
@@ -41,7 +37,6 @@
 
         <div class="row">
 
-            <!-- Sidebar -->
             <nav id="sidebar" class="col-md-3 col-lg-2 bg-dark text-white d-flex flex-column p-3 pb-4 rounded-start-4">
                 <div class="container-fluid p-3">
                     <img src="https://getbootstrap.com/docs/5.3/assets/brand/bootstrap-logo.svg" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
@@ -87,85 +82,51 @@
             <main class="col-md-4 ms-sm-auto col-lg-10 px-md-4">
                 <div class="d-flex justify-content-center flex-wrap align-items-center pt-4 pb-3 mb-3">
                     <div class="center-content">
-                        <h1 class="h2">Категория 1</h1>
+                        <h1 class="h2">Контакты</h1>
 
                     </div>
-                    <div class="container pt-3">
-                      <div class="row row-cols-1 row-cols-md-4 g-3 p-2 g-col-3 grid gap-3 justify-content-center ">
-                        <!-- Карточка 1 -->
+                    <div class="container pt-5">
+                      <div class="row row-cols-1 row-cols-md-3 g-3 p-2 g-col-3 grid gap-3 justify-content-center ">
                         <div class="col">
                           <div class="card">
-                            <h5 class="card bg-dark-subtle text-center pt-2 pb-2 ">Товар 1</h5>
                             <div class="card-body ">
-                              <h2 class="card-title text-center">15.000₽</h2>
-                              <p class="card-text text-center">Одностраничный веб-сайт</p>
-                              <a href="#" class="btn btn-outline-primary d-flex justify-content-center flex-wrap">Buy</a>
+                              <div class="mb-3">
+                                <label for="exampleFormControlInput1" class="form-label ">Имя</label>
+                                <input type="email" class="form-control" id="exampleFormControlInput0" placeholder="Иван">
+                              </div>
+                              <div class="mb-3">
+                                <label for="exampleFormControlInput1" class="form-label ">Почта</label>
+                                <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+                              </div>
+                              <div class="mb-3">
+                                <label for="exampleFormControlTextarea1" class="form-label">Сообщение</label>
+                                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                              </div>
+                              <a href="#" class="btn btn-primary">Отправить</a>
                             </div>
                           </div>
-                        </div>
-                        <!-- Карточка 2 -->
-                        <div class="col">
-                          <div class="card">
-                            <h5 class="card bg-dark-subtle text-center pt-2 pb-2">Товар 2</h5>
-                            <div class="card-body">
-                              <h2 class="card-title text-center">50.000₽</h2>
-                              <p class="card-text text-center">Чат-бот</p>
-                              <a href="#" class="btn btn-outline-primary d-flex justify-content-center flex-wrap">Buy</a>
-                            </div>
-                          </div>
-                        </div>
-                        <!-- Карточка 3 -->
-                        <div class="col">
-                          <div class="card">
-                            <h5 class="card bg-dark-subtle text-center pt-2 pb-2">Товар 3</h5>
-                            <div class="card-body">
-                              <h2 class="card-title text-center">100.000₽</h2>
-                              <p class="card-text text-center">Парсинг данных</p>
-                              <a href="#" class="btn btn-outline-primary d-flex justify-content-center flex-wrap">Buy</a>
-                            </div>
-                          </div>
-                        </div>
-                        <!-- Карточка 4 -->
-                        <div class="col">
-                          <div class="card">
-                            <h5 class="card bg-dark-subtle text-center pt-2 pb-2">Товар 4</h5>
-                            <div class="card-body">
-                              <h2 class="card-title text-center">130.000₽</h2>
-                              <p class="card-text text-center">Рефакториг кода</p>
-                              <a href="#" class="btn btn-outline-primary d-flex justify-content-center flex-wrap">Buy</a>
-                            </div>
-                          </div>
+
                         </div>
 
-                        <!-- Карточка 5 -->
-                        <div class="col">
-                          <div class="card">
-                            <h5 class="card bg-dark-subtle text-center pt-2 pb-2">Товар 5</h5>
-                            <div class="card-body">
-                              <h2 class="card-title text-center">200.000₽</h2>
-                              <p class="card-text text-center">Развернуть сервер</p>
-                              <a href="#" class="btn btn-outline-primary d-flex justify-content-center flex-wrap">Buy</a>
-                            </div>
-                          </div>
-                        </div>
 
-                        <!-- Карточка 6 -->
+
+                        <div class="row row-cols-1 row-cols-md-1 g-1 p-2 g-col-3 grid gap-3">
                         <div class="col">
-                          <div class="card">
-                            <h5 class="card bg-dark-subtle text-center pt-2 pb-2">Товар 6</h5>
-                            <div class="card-body">
-                              <h2 class="card-title text-center">500.000₽</h2>
-                              <p class="card-text text-center">Сайт под ключ</p>
-                              <a href="#" class="btn btn-outline-primary d-flex justify-content-center flex-wrap">Buy</a>
+                          <div class="card border-0">
+                            <div class="card-body ">
+                              <h2 class="card-title text-center">Наши контакты</h2>
+                              <p class="card-text text-center">Вы можете связаться с нами по любым вопросам. Мы всегда рады помочь!</p>
+                              <ul>
+                                  <li>Телефон: +1 (234) 567-8901</li>
+                                  <li>Email: info@example.com</li>
+                                  <li>Адрес: ул. Примерная, 123, г. Москва, Россия</li>
+                                  <li>Часы работы: Пн-Пт, с 9:00 до 18:00</li>
+                              </ul>
                             </div>
                           </div>
                         </div>
                       </div>
                     </div>
-
-                </div>
-
-
             </main>
         </div>
     </div>
