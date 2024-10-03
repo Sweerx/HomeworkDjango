@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Главная</title>
+
+    <link rel="stylesheet" href="https://github.com/Sweerx/HomeworkDjango/blob/feature/task_1/css/bootstrap.min.css">
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        html, body {
+            height: 100%;
+        }
+
+        body {
+            display: flex;
+        }
+
+        #sidebar {
+            height: 100vh;
+        }
+
+        main {
+            height: 100vh;
+            overflow-y: auto;
+        }
+
+        .center-content {
+            text-align: center;
+        }
+
+
+    </style>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="row">
+
+            <nav id="sidebar" class="col-md-3 col-lg-2 bg-dark text-white d-flex flex-column p-3 pb-4 rounded-start-4">
+                <div class="container-fluid p-3">
+                    <img src="https://getbootstrap.com/docs/5.3/assets/brand/bootstrap-logo.svg" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
+                    Меню
+                </div>
+                <ul class="nav nav-pills flex-column border-top border-secondary p-3">
+                    <li class="nav-item">
+                        <a class="nav-link active text-white" aria-current="page" href="index.html">
+                            <img src="icon_home.png" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
+                            Главная
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="catalog.html">
+                            Каталог
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="category.html">
+                            Категория 1
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="contacts.html">
+                            Контакты
+                        </a>
+                    </li>
+                </ul>
+
+                <div class="dropdown mt-auto border-top border-secondary">
+                        <a class="nav-link dropdown-toggle text-white pt-4" href="#" id="profileDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            <img src="icon_users_profile.png" width="30" height="30" class="rounded-circle me-2" alt="User"> Пользователь
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="profileDropdown">
+                            <li><a class="dropdown-item" href="#">Профиль</a></li>
+                            <li><a class="dropdown-item" href="#">Выход</a></li>
+                        </ul>
+                </div>
+            </nav>
+
+            <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+                <div class="d-flex justify-content-center flex-wrap align-items-center pt-3 pb-2 mb-3">
+                    <div class="center-content">
+                        <h1 class="h2">Главная</h1>
+                        <p>Вы находитесь на сайте, предназначенном для продажи товаров.</p>
+                    </div>
+                </div>
+
+                <div class="row justify-content-center">
+                    <div class="col-md-4">
+                        <div class="card mb-4">
+                            <div class="card-body text-center">
+                                <h5 class="card-title">Услуги Python-разработчика</h5>
+                                <h6 class="card-price">300.000₽</h6>
+                                <p class="card-text">Разработка бэкэнда </p>
+                                <button class="btn btn-primary">Купить</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="card mb-4">
+                            <div class="card-body text-center">
+                                <h5 class="card-title">Услуги Java-разработчика</h5>
+                                <h6 class="card-price">200.000₽</h6>
+                                <p class="card-text">Мобильная разработка</p>
+                                <button class="btn btn-primary">Купить</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card mb-4">
+                            <div class="card-body text-center">
+                                <h5 class="card-title">Услуги дизайнера</h5>
+                                <h6 class="card-price">100.000₽</h6>
+                                <p class="card-text">Разработка макетов для Веб-сервисов</p>
+                                <button class="btn btn-primary">Купить</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+<script src="https://github.com/Sweerx/HomeworkDjango/blob/feature/task_1/js/bootstrap.bundle.min.js" defer></script>
+</body>
+
+</html>

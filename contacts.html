@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Контакты</title>
+
+    <link rel="stylesheet" href="https://github.com/Sweerx/HomeworkDjango/blob/feature/task_1/css/bootstrap.min.css">
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        html, body {
+            height: 100%;
+        }
+
+        body {
+            display: flex;
+        }
+
+        #sidebar {
+            height: 100vh;
+        }
+
+        main {
+            height: 100vh;
+            overflow-y: auto;
+        }
+
+        .center-content {
+            text-align: center;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="container-fluid">
+
+        <div class="row">
+
+            <nav id="sidebar" class="col-md-3 col-lg-2 bg-dark text-white d-flex flex-column p-3 pb-4 rounded-start-4">
+                <div class="container-fluid p-3">
+                    <img src="https://getbootstrap.com/docs/5.3/assets/brand/bootstrap-logo.svg" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
+                    Меню
+                </div>
+                <ul class="nav nav-pills flex-column border-top border-secondary p-3">
+                    <li class="nav-item">
+                        <a class="nav-link active text-white" aria-current="page" href="index.html">
+                            <img src="icon_home.png" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
+                            Главная
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="catalog.html">
+                            Каталог
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="category.html">
+                            Категория 1
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="contacts.html">
+                            Контакты
+                        </a>
+                    </li>
+                </ul>
+
+                <div class="dropdown mt-auto border-top border-secondary">
+                        <a class="nav-link dropdown-toggle text-white pt-4" href="#" id="profileDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            <img src="icon_users_profile.png" width="30" height="30" class="rounded-circle me-2" alt="User"> Пользователь
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="profileDropdown">
+                            <li><a class="dropdown-item" href="#">Профиль</a></li>
+                            <li><a class="dropdown-item" href="#">Выход</a></li>
+                        </ul>
+                </div>
+            </nav>
+
+
+            <main id="contacts" class="col-md-4 ms-sm-auto col-lg-10 px-md-4">
+                <div class="d-flex justify-content-center flex-wrap align-items-center pt-4 pb-3 mb-3">
+                    <div class="center-content">
+                        <h1 class="h2">Контакты</h1>
+
+                    </div>
+                    <div class="container pt-5">
+                      <div class="row row-cols-1 row-cols-md-3 g-3 p-2 g-col-3 grid gap-3 justify-content-center ">
+                        <div class="col">
+                          <div class="card">
+                            <div class="card-body ">
+                              <div class="mb-3">
+                                <label for="exampleFormControlInput1" class="form-label ">Имя</label>
+                                <input type="email" class="form-control" id="exampleFormControlInput0" placeholder="Иван">
+                              </div>
+                              <div class="mb-3">
+                                <label for="exampleFormControlInput1" class="form-label ">Почта</label>
+                                <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+                              </div>
+                              <div class="mb-3">
+                                <label for="exampleFormControlTextarea1" class="form-label">Сообщение</label>
+                                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                              </div>
+                              <a href="#" class="btn btn-primary">Отправить</a>
+                            </div>
+                          </div>
+
+                        </div>
+
+
+
+                        <div class="row row-cols-1 row-cols-md-1 g-1 p-2 g-col-3 grid gap-3">
+                        <div class="col">
+                          <div class="card border-0">
+                            <div class="card-body ">
+                              <h2 class="card-title text-center">Наши контакты</h2>
+                              <p class="card-text text-center">Вы можете связаться с нами по любым вопросам. Мы всегда рады помочь!</p>
+                              <ul>
+                                  <li>Телефон: +1 (234) 567-8901</li>
+                                  <li>Email: info@example.com</li>
+                                  <li>Адрес: ул. Примерная, 123, г. Москва, Россия</li>
+                                  <li>Часы работы: Пн-Пт, с 9:00 до 18:00</li>
+                              </ul>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                </div>
+             </main>
+        </div>
+    </div>
+<script src="https://github.com/Sweerx/HomeworkDjango/blob/feature/task_1/js/bootstrap.bundle.min.js" defer></script>
+
+</body>
+
+</html>

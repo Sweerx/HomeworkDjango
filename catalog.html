@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Каталог</title>
+
+    <link rel="stylesheet" href="https://github.com/Sweerx/HomeworkDjango/blob/feature/task_1/css/bootstrap.min.css">
+
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        html, body {
+            height: 100%;
+        }
+
+        body {
+            display: flex;
+        }
+
+        #sidebar {
+            height: 100vh;
+        }
+
+        main {
+            height: 100vh;
+            overflow-y: auto;
+        }
+
+        .center-content {
+            text-align: center;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="container-fluid">
+
+        <div class="row">
+
+            <nav id="sidebar" class="col-md-3 col-lg-2 bg-dark text-white d-flex flex-column p-3 pb-4 rounded-start-4">
+                <div class="container-fluid p-3">
+                    <img src="https://getbootstrap.com/docs/5.3/assets/brand/bootstrap-logo.svg" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
+                    Меню
+                </div>
+                <ul class="nav nav-pills flex-column border-top border-secondary p-3">
+                    <li class="nav-item">
+                        <a class="nav-link active text-white" aria-current="page" href="index.html">
+                            <img src="icon_home.png" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
+                            Главная
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="catalog.html">
+                            Каталог
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="category.html">
+                            Категория 1
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="contacts.html">
+                            Контакты
+                        </a>
+                    </li>
+                </ul>
+
+                <div class="dropdown mt-auto border-top border-secondary">
+                        <a class="nav-link dropdown-toggle text-white pt-4" href="#" id="profileDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            <img src="icon_users_profile.png" width="30" height="30" class="rounded-circle me-2" alt="User"> Пользователь
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="profileDropdown">
+                            <li><a class="dropdown-item" href="#">Профиль</a></li>
+                            <li><a class="dropdown-item" href="#">Выход</a></li>
+                        </ul>
+                </div>
+            </nav>
+
+
+            <main class="col-md-4 ms-sm-auto col-lg-10 px-md-4">
+                <div class="d-flex justify-content-center flex-wrap align-items-center pt-4 pb-3 mb-3">
+                    <div class="center-content">
+                        <h1 class="h2">Каталог</h1>
+
+                    </div>
+                    <div class="container pt-3">
+                      <div class="row row-cols-1 row-cols-md-2 g-4 justify-content-center">
+                        <!-- Карточка 1 -->
+                        <div class="col">
+                          <div class="card">
+                            <img src="icon_product_1.png" width="400" height="240" class="card-img-top" alt="Thumbnail">
+                            <div class="card-body pb-1">
+                              <h5 class="card-title">Bootstrap</h5>
+                              <p class="card-text">Bootstrap — популярный фреймворк для создания сайтов и веб-приложений с открытым исходным кодом.
+                                  Включает в себя HTML- и CSS-шаблоны оформления для типографики, веб-форм, кнопок, меток,
+                                  блоков навигации и прочих компонентов веб-интерфейса, включая JavaScript-расширения.
+                                  Bootstrap использует современные наработки в области CSS, JavaScript и HTML,
+                                  поэтому использование данного инструмента не всегда может быть правильным решением при использовании старых браузеров.</p>
+                              <a href="#" class="btn btn-primary">View</a>
+                              <a href="#" class="btn btn-secondary">Buy</a>
+                              <small class="text-muted d-flex justify-content-end">16 mins</small>
+                            </div>
+                          </div>
+                        </div>
+                        <!-- Карточка 2 -->
+                        <div class="col">
+                          <div class="card">
+                            <img src="icon_product_2.png" width="400" height="240" class="card-img-top" alt="Thumbnail">
+                            <div class="card-body pt-5">
+                              <h5 class="card-title">Flask</h5>
+                              <p class="card-text ">Flask — фреймворк для создания веб-приложений на языке программирования Python,
+                                  использующий набор инструментов Werkzeug, а также шаблонизатор Jinja2.
+                                  Относится к категории так называемых микрофреймворков — минималистичных каркасов веб-приложений,
+                                  сознательно предоставляющих лишь самые базовые возможности.</p>
+                              <a href="#" class="btn btn-primary">View</a>
+                              <a href="#" class="btn btn-secondary">Buy</a>
+                              <small class="text-muted d-flex justify-content-end">12 mins</small>
+                            </div>
+                          </div>
+                        </div>
+                        <!-- Карточка 3 -->
+                        <div class="col">
+                          <div class="card">
+                            <img src="icon_product_3.png" width="400" height="240" class="card-img-top" alt="Thumbnail">
+                            <div class="card-body">
+                              <h5 class="card-title">Django</h5>
+                              <p class="card-text">Django — свободный фреймворк для веб-приложений на языке
+                                  Python, использующий шаблон проектирования. Проект поддерживается организацией Django Software Foundation.
+                                  Сайт на Django строится из одного или нескольких приложений, которые рекомендуется делать отчуждаемыми и подключаемыми.
+                                  Это одно из существенных архитектурных отличий этого фреймворка от некоторых других (например, Ruby on Rails).</p>
+                              <a href="#" class="btn btn-primary">View</a>
+                              <a href="#" class="btn btn-secondary">Buy</a>
+                              <small class="text-muted d-flex justify-content-end">28 mins</small>
+                            </div>
+                          </div>
+                        </div>
+                        <!-- Карточка 4 -->
+                        <div class="col">
+                          <div class="card">
+                            <img src="icon_product_4.png" width="400" height="240" class="card-img-top" alt="Thumbnail">
+                            <div class="card-body">
+                              <h5 class="card-title">Docker</h5>
+                              <p class="card-text">Docker — программное обеспечение для автоматизации развёртывания и управления приложениями в средах с поддержкой контейнеризации,
+                                  контейнеризатор приложений. Позволяет «упаковать» приложение со всем своим окружением и зависимостями в контейнер,
+                                  который может быть развёрнут на любой Linux-системе с поддержкой контрольных групп в ядре,
+                                  а также предоставляет набор команд для управления этими контейнерами.</p>
+                              <a href="#" class="btn btn-primary">View</a>
+                              <a href="#" class="btn btn-secondary">Buy</a>
+                              <small class="text-muted d-flex justify-content-end">45 mins</small>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                </div>
+
+
+            </main>
+        </div>
+    </div>
+<script src="https://github.com/Sweerx/HomeworkDjango/blob/feature/task_1/js/bootstrap.bundle.min.js" defer></script>
+</body>
+
+</html>
